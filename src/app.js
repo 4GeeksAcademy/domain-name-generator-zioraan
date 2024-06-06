@@ -1,11 +1,18 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+let pronoun = ["the", "our", "their", "my", "your"];
+let noun = ["princess", "raccoon", "fox", "stagbeetle", "king"];
+let adjective = ["big", "beautiful", "nasty", "rude", "quick"];
+let domain = [".com", ".us", ".uk", ".gov", ".org"];
+const name = [];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+for (let index = 0; index < pronoun.length; index++) {
+  for (let secondIndex = 0; secondIndex < noun.length; secondIndex++) {
+    for (let thirdIndex = 0; thirdIndex < adjective.length; thirdIndex++) {
+      for (let fourthIndex = 0; fourthIndex < domain.length; fourthIndex++) {
+        name.push(
+          `${pronoun[index]}${adjective[thirdIndex]}${noun[secondIndex]}${domain[fourthIndex]}`
+        );
+      }
+    }
+  }
+}
+console.log(name);
