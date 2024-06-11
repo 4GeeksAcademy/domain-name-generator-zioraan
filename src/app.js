@@ -1,18 +1,18 @@
-let pronoun = ["the", "our", "their", "my", "your"];
-let noun = ["princess", "raccoon", "fox", "stagbeetle", "king"];
-let adjective = ["big", "beautiful", "nasty", "rude", "quick"];
-let domain = [".com", ".us", ".uk", ".gov", ".org"];
-const name = [];
+let pronouns = ["the", "our", "their", "my", "your"];
+let adjectives = ["big", "beautiful", "nasty", "rude", "quick"];
+let nouns = ["princess", "raccoon", "fox", "stagbeetle", "king"];
+let domains = [".com", ".us", ".uk", ".gov", ".org"];
+const domainNames = [];
 
-for (let index = 0; index < pronoun.length; index++) {
-  for (let secondIndex = 0; secondIndex < noun.length; secondIndex++) {
-    for (let thirdIndex = 0; thirdIndex < adjective.length; thirdIndex++) {
-      for (let fourthIndex = 0; fourthIndex < domain.length; fourthIndex++) {
-        name.push(
-          `${pronoun[index]}${adjective[thirdIndex]}${noun[secondIndex]}${domain[fourthIndex]}`
+for (let pronoun = 0; pronoun < pronouns.length; pronoun++) {
+  for (let adjective = 0; adjective < adjectives.length; adjective++) {
+    for (let noun = 0; noun < nouns.length; noun++) {
+      for (let domain = 0; domain < domains.length; domain++) {
+        domainNames.push(
+          `${pronouns[pronoun]}${adjectives[adjective]}${nouns[noun]}${domains[domain]}`
         );
       }
     }
   }
 }
-console.log(name);
+console.log(domainNames);
